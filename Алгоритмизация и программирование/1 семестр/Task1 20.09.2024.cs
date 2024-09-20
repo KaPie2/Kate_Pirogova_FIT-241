@@ -1,16 +1,18 @@
 //На вход подается 2 переменные. Необходимо написать программу, которая выполняет обмен значений этих переменных. Нельзя использовать никакие дополнительные переменные.
 
 using System;
-public class Task1
+class Task1
 {
-    public static void Main()
+    static void Main()
     {
-        Console.Write("enter the first variable: ");
+        Console.Write("Введите первую переменную: ");
         int a = Convert.ToInt32(Console.ReadLine());
-        Console.Write("enter the second variable: ");
+        Console.Write("Введите вторую переменную: ");
         int b = Convert.ToInt32(Console.ReadLine());
-        (a, b) = (b, a);
-        Console.WriteLine($"the first variable: {a}");
-        Console.WriteLine($"the second variable: {b}");
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        Console.WriteLine($"Первая переменная: {a}");
+        Console.WriteLine($"Вторая переменная: {b}");
     }
 }
