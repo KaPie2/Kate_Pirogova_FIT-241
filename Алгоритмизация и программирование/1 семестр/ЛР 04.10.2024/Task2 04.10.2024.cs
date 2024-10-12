@@ -4,7 +4,7 @@
 
 using System;
 
-class Task1
+class Task2
 {
     static void Main()
     {
