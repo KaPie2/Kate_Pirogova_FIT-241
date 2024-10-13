@@ -1,39 +1,32 @@
 //Дана последовательность из n элементов (массивы не знаем)
 //Минимальную длину подпоследовательности из единичек
 
-
 using System;
 
 class Task2
 {
     static void Main()
     {
-        int last_num, curr_num, cnt = 0, cnt_min = 0;
+        int num, cnt = 0, cnt_min;
         Console.Write("Введите количество элементов: ");
         int n = Convert.ToInt32(Console.ReadLine());
+        cnt_min = n + 1;
         Console.WriteLine($"Введите {n} целых чисел");
-        last_num = Convert.ToInt32(Console.ReadLine());
-        if (last_num == 1)
+        for (int i = 0; i < n; i++)
         {
-            cnt++;
-        }
-        for (int i = 1; i < n; i++)
-        {
-            curr_num = Convert.ToInt32(Console.ReadLine());
-            if (curr_num == 1)
+            num = Convert.ToInt32(Console.ReadLine());
+            if (num == 1)
             {
                 cnt++;
-            } else if (last_num == 1 && curr_num != 1 && cnt_min == 0)
+            }
+            else
             {
-                cnt_min = cnt;
-                cnt = 0;
-            } else if (last_num == 1 && curr_num != 1 && cnt != 0)
-            {
-                cnt_min = Math.Min(cnt, cnt_min);
+                if (cnt > 0) cnt_min = Math.Min(cnt, cnt_min);
                 cnt = 0;
             }
-            last_num = curr_num;
         }
+        if (cnt > 0) cnt_min = Math.Min(cnt, cnt_min);
+        if (cnt_min == n + 1) cnt_min = 0;
         Console.WriteLine($"Минимальная длина из единиц: {cnt_min}");
     }
 }
