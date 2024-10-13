@@ -34,7 +34,7 @@ class Task3
                 second_max = curr_num;
             }
         }
-        Console.WriteLine($"1-ый максимальный элемент: {first_max}");
+        // Console.WriteLine($"1-ый максимальный элемент: {first_max}");
         Console.WriteLine($"Второй максимальный элемент: {second_max}");
     }
 }
