@@ -29,7 +29,7 @@ class Task3
             {
                 second_max = first_max;
                 first_max = curr_num;
-            } else if (curr_num > second_max && curr_num < first_max)
+            } else if (curr_num > second_max && curr_num <= first_max)
             {
                 second_max = curr_num;
             }
