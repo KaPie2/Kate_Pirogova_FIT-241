@@ -6,15 +6,17 @@ class Task3
 {
     static void Main()
     {
-        int[] num = new int[6];
+        Console.Write("Введите количество элементов: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[] num = new int[n];
         int maxi, mini, num_max = 0, num_min = 0;
-        Console.WriteLine("Введите 6 целых чисел");
-        for (int i = 0; i < 6; i++)
+        Console.WriteLine($"Введите {n} целых чисел");
+        for (int i = 0; i < n; i++)
         {
             num[i] = Convert.ToInt32(Console.ReadLine());
         }
         maxi = mini = num[0];
-        for (int i = 1; i < 6; i++)
+        for (int i = 1; i < n; i++)
         {
             if (num[i] > maxi)
             {
