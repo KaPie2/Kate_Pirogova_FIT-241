@@ -6,14 +6,16 @@ class Task2
 {
     static void Main()
     {
-        int[] num = new int[6];
+        Console.Write("Введите количество элементов: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[] num = new int[n];
         bool flag = true;
-        Console.WriteLine("Введите 6 целых чисел");
-        for (int i = 0; i < 6; i++)
+        Console.WriteLine($"Введите {n} целых чисел");
+        for (int i = 0; i < n; i++)
         {
             num[i] = Convert.ToInt32(Console.ReadLine());
         }
-        for (int i = 2; i < 6; i++)
+        for (int i = 2; i < n; i++)
         {
             if (num[i] - num[i - 1] != num[i - 1] - num[i - 2])
             {
@@ -21,7 +23,7 @@ class Task2
                 break;
             }
         }
-        if (flag) Console.WriteLine($"Элементы массива являются равномерно возрастающей последовательностью");
-        else Console.WriteLine($"Элементы массива не являются равномерно возрастающей последовательностью");
+        if (flag) Console.WriteLine("Элементы массива являются равномерно возрастающей последовательностью");
+        else Console.WriteLine("Элементы массива не являются равномерно возрастающей последовательностью");
     }
 }
