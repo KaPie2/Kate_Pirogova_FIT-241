@@ -10,7 +10,7 @@ class Test
         int n = Convert.ToInt32(Console.ReadLine());
         char[] moves = new char[n];
         string[] num = new string[n];
-        Console.WriteLine($"Введите {n} действий в формате S V, где S - тип действия (*, +, -), V - число, например \"* 4\" или \"- х\", где х - неизвестное число");
+        Console.WriteLine($"Введите {n} действий в формате S V, где S - тип действия (*, +, -), V - число, например \"* 4\" или \"- х\", где х (с английской раскладки) - неизвестное число");
         for (int i = 0; i < n; i++)
         {
             string s = Console.ReadLine();
@@ -19,7 +19,7 @@ class Test
         }
         Console.Write("Введите результат: ");
         int r = Convert.ToInt32(Console.ReadLine());
-        for (int x = 0; x < 2000; x++)
+        for (int x = -2000000000; x < 2000000001; x++)
         {
             int res = x;
             for (int i = 0; i < n; i++)
@@ -28,7 +28,8 @@ class Test
                 {
                     if (moves[i] == '+') res += x;
                     else res -= x;
-                } else
+                }
+                else
                 {
                     switch (moves[i])
                     {
@@ -46,10 +47,10 @@ class Test
             }
             if (res == r)
             {
-                Console.WriteLine(x);
+                Console.WriteLine($"Загаданное число: {x}");
                 break;
             }
         }
-        
+
     }
 }
