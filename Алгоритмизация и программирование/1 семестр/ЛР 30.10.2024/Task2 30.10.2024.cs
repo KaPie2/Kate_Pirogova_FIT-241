@@ -17,7 +17,7 @@ class Task2
         }
         for (int i = 2; i < n; i++)
         {
-            if ((num[i] - num[i - 1] != num[i - 1] - num[i - 2]) || (num[i] == num[i - 1]) || (num[i - 2] == num[i - 1]))
+            if ((num[i] - num[i - 1] != num[i - 1] - num[i - 2]) || (num[i] - num[i - 1] <= 0) || (num[i - 1] - num[i - 2] <= 0))
             {
                 flag = false;
                 break;
