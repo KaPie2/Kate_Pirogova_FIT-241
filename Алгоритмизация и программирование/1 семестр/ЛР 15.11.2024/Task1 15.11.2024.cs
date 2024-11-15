@@ -18,7 +18,7 @@ class Task1
     }
     static void Main()
     {
-        int maxi = 0, mini = 0; //задаем значения, чтобы при проверке машина не ругалась. В последнем вложенном цикле эти значения присваиваются заново
+        int maxi = 0, mini = 0;
         Console.Write("Введите количество одномерных массивов зубчатого массива: ");
         int n = Convert.ToInt32(Console.ReadLine());
         int[][] num = new int[n][];
