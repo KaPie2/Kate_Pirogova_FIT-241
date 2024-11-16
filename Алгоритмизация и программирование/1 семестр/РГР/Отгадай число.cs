@@ -19,7 +19,7 @@ class Test
         }
         Console.Write("Введите результат: ");
         int r = Convert.ToInt32(Console.ReadLine());
-        for (int x = -2000000000; x < 2000000001; x++)
+        for (int x = -100; x < 101; x++)
         {
             int res = x;
             for (int i = 0; i < n; i++)
