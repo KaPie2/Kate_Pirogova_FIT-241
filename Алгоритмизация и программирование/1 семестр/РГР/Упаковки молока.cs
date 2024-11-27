@@ -7,12 +7,12 @@ class Test
     static void Main()
     {
         double min_price_milk = int.MaxValue;
-        int fab_ind = 0;
-        Console.Write("Введите количество фабрик: ");
+        int firm_ind = 0;
+        Console.Write("Введите количество фирм: ");
         int n = Convert.ToInt32(Console.ReadLine());
         for (int i = 1; i <= n; i++)
         {
-            Console.WriteLine($"Введите рамзеры двух упаковов молока и их стоимость на {i}-й фабрике через пробел: ");
+            Console.WriteLine($"Введите рамзеры двух упаковов молока и их стоимость на {i}-й фирме через пробел: ");
             var data = Console.ReadLine().Replace('.', ',').Split(' ');
             int x1 = Convert.ToInt32(data[0]);
             int y1 = Convert.ToInt32(data[1]);
@@ -31,14 +31,14 @@ class Test
             double v1 = (x1 * y1 * z1);
             double v2 = (x2 * y2 * z2);
 
-            double price_milk = 1000 * (price2 - price1 * s2 / s1) / (v2 - v1 * s2 / s1);
+            double price_milk = 1000 * (price1 * s2 / s1 - price2) / (v1 * s2 / s1 - v2);
 
             if (price_milk < min_price_milk)
             {
                 min_price_milk = price_milk;
-                fab_ind = i;
+                firm_ind = i;
             }
         }
-        Console.WriteLine($"На {fab_ind}-й фабрике минимальная стоимость литра молока, равная {min_price_milk:0.00}");
+        Console.WriteLine($"На {firm_ind}-й фирме стоимость литра молока минимальна среди остальных и равна {min_price_milk:0.00}");
     }
 }
