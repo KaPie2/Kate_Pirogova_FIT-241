@@ -1,7 +1,7 @@
 //Выдать все слова, в которых присутствует хотя бы один символ «а»
 using System;
 
-class Task3
+class Task4
 {
     static void Main()
     {
