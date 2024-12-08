@@ -1,7 +1,5 @@
 //Отгадай число
-
 using System;
-
 class Test
 {
     static void Main()
@@ -51,6 +49,5 @@ class Test
                 break;
             }
         }
-
     }
 }
