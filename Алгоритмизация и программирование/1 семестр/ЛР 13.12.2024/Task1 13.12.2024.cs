@@ -12,24 +12,24 @@ using System.Collections.Specialized;
 
 namespace Task1
 {
-    class Numbers
+    class Calc
     {
         private float Num1 { get; set; }
         private float Num2 { get; set; }
 
-        public Numbers()
+        public Calc()
         {
             Num1 = 0;
             Num2 = 0;
         }
 
-        public Numbers(float Num1)
+        public Calc(float Num1)
         {
             this.Num1 = Num1;
             Num2 = 0;
         }
 
-        public Numbers(float Num1, float Num2)
+        public Calc(float Num1, float Num2)
         {
             this.Num1 = Num1;
             this.Num2 = Num2;
@@ -55,7 +55,7 @@ namespace Task1
             float a = 24;
             float b = 6;
 
-            Numbers numbers = new Numbers(a, b);
+            Calc numbers = new Calc(a, b);
 
             numbers.Summa();
             numbers.Difference();
