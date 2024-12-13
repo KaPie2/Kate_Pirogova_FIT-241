@@ -14,8 +14,8 @@ namespace Task1
 {
     class Calc
     {
-        private float Num1 { get; set; }
-        private float Num2 { get; set; }
+        public float Num1 { get; set; }
+        public float Num2 { get; set; }
 
         public Calc()
         {
