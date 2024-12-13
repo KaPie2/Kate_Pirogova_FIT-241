@@ -55,12 +55,25 @@ namespace Task1
             float a = 24;
             float b = 6;
 
-            Calc numbers = new Calc(a, b);
+            Calc move1 = new Calc();
+            move1.Summa();
+            move1.Difference();
+            move1.Product();
+            move1.Division();
+            Console.WriteLine();
 
-            numbers.Summa();
-            numbers.Difference();
-            numbers.Product();
-            numbers.Division();
+            Calc move2 = new Calc(a);
+            move2.Summa();
+            move2.Difference();
+            move2.Product();
+            move2.Division();
+            Console.WriteLine();
+
+            Calc move3 = new Calc(a, b);
+            move3.Summa();
+            move3.Difference();
+            move3.Product();
+            move3.Division();
         }
     }
 }
