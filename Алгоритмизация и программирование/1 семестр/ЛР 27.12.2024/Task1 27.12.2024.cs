@@ -4,6 +4,8 @@
 //Выборка по температурному режиму (хлеб, который печется при данной температуре)
 
 using System;
+using System.Threading;
+using System.Timers;
 
 namespace Task1
 {
@@ -76,7 +78,11 @@ namespace Task1
                 {
                     Console.Write("Введите температуру запекания (в Цельсиях): ");
                     int temp_equal = Convert.ToInt32(Console.ReadLine());
-                    var res_temp = breadDB.FindAll(bread => bread.Temperature == temp_equal);
+                    List<Bread> res_temp = new List<Bread>();
+                    foreach (var el in breadDB)
+                    {
+                        if (el.Temperature == temp_equal) res_temp.Add(el);
+                    }
                     if (res_temp.Count > 0)
                     {
                         Console.WriteLine("Хлеб, который запекаектся при данной температуре");
