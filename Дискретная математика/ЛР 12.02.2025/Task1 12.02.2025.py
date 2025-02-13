@@ -2,20 +2,18 @@ def find_components(n):
     data.append(n)
     for i in range(0, len(matrix)):
         if matrix[n][i] == '1' and (i not in data):
-            copy_vertexes.remove(i)
+            vertexes.remove(i)
             find_components(i)
-    return data
 
-f = open('file.txt')
+f = open('test1.txt')
 matrix = []
 for el in f:
     matrix.append(el.split())
 vertexes = list(range(0, len(matrix)))
-copy_vertexes = vertexes.copy()
 components = []
-while copy_vertexes != []:
+while vertexes != []:
     data = []
-    find_components(copy_vertexes[0])
-    copy_vertexes.remove(copy_vertexes[0])
+    find_components(vertexes[0])
+    vertexes.remove(vertexes[0])
     components.append(data)
-print(len(components))
+print(f'Количество компонент связности графа: {len(components)}')
