@@ -3,7 +3,6 @@ matrix = []
 for el in f:
     matrix.append(el.split())
 vertexes = [None] * 8
-print(vertexes)
 vertexes[0] = 1
 cnt = 1 #счетчик компонентов
 for i in range(len(matrix)):
