@@ -2,7 +2,7 @@ f = open('test1.txt')
 matrix = []
 for el in f:
     matrix.append(el.split())
-vertexes = [None] * 8
+vertexes = [None] * len(matrix)
 vertexes[0] = 1
 cnt = 1 #счетчик компонентов
 for i in range(len(matrix)):
