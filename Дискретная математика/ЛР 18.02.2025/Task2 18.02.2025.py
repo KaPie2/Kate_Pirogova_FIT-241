@@ -22,7 +22,6 @@ cnt_components = len(components)
 if cnt_components > 1:
     print("Граф не связный!")
 else:
-    vertexes = list(range(0, len(matrix)))
     min_weight = 0
     edges = []
     components_of_vertexes = [x for x in range(len(matrix))]
