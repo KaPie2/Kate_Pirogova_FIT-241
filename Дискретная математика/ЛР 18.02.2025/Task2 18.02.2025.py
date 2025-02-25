@@ -3,7 +3,7 @@
 def find_components(n):
     data.append(n)
     for i in range(len(matrix)):
-        if matrix[n][i] != '0' and (i not in data):
+        if matrix[n][i] != 0 and (i not in data):
             vertexes.remove(i)
             find_components(i)
 
