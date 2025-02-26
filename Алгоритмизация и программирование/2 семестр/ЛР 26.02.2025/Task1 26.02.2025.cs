@@ -22,7 +22,8 @@ namespace Task1
             foreach (char el in sequence)
             {
                 if (opening_brackets.Contains(el)) stackOfBrackets.Push(el);
-                if (closing_brackets.Contains(el) && stackOfBrackets.Count != 0)
+                else if (closing_brackets.Contains(el) && stackOfBrackets.Count == 0) flag = false;
+                else if (closing_brackets.Contains(el) && stackOfBrackets.Count != 0)
                 {
                     if ((stackOfBrackets.Peek().Equals('(') && el == ')') || (stackOfBrackets.Peek().Equals('[') && el == ']') || (stackOfBrackets.Peek().Equals('{') && el == '}'))
                     {
@@ -30,13 +31,13 @@ namespace Task1
                     }
                     else
                     {
-                        Console.WriteLine("Скобки расставлены неправильно!");
                         flag = false;
                         break;
                     }
                 }
             }
             if (flag) Console.WriteLine("Скобки расставлены правильно!");
+            else Console.WriteLine("Скобки расставлены неправильно!");
         }
     }
 }
