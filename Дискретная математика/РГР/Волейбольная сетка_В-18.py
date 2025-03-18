@@ -8,7 +8,7 @@ vertexes = (n + 1) * (m + 1)
 
 matrix = [[0 for _ in range(vertexes)] for _ in range(vertexes)]
 
-# Поиск ребер
+# Создание матрицы смежности (не симметрична, только верхний треугольник) и поиск ребер
 edges = []
 for i in range(vertexes):
     for j in range(i + 1, vertexes):
